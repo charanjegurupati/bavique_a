@@ -1,0 +1,625 @@
+<USER_REQUEST>
+# MASTER PROMPT: BAVIQUE — Premium Girls' Accessories Catalogue Website
+
+## 1. Your Role
+
+Act as a **senior UI/UX designer, senior full-stack developer, security engineer, database architect, and QA tester**. Build a complete, polished, production-ready website for **BAVIQUE — Fancy, Beauty, Fashion**.
+
+Do not create only a static design or landing-page prototype. Build a functional website with a connected backend, database, secure admin dashboard, product image uploads, working category filters, and complete testing.
+
+Think like a senior developer: plan the architecture, build the interface, implement all functionality, review security, test every feature, and fix issues before declaring the project complete.
+
+## 2. Business Overview
+
+**Brand name:** BAVIQUE  
+**Tagline:** More than just a store… it's a vibe.
+
+**Business type:** A local girls' accessories, beauty, jewellery, and fashion store.
+
+**Purpose:** Create an attractive online catalogue that allows customers to discover products available in the physical store.
+
+### Critical business rule
+
+This is a **product-display-only website, NOT an e-commerce website**.
+
+- Customers can view product images, descriptions, prices, categories, and availability.
+- Customers cannot purchase products online.
+- Do not implement checkout, shopping carts, online payments, delivery orders, or order management.
+- Do not create unnecessary customer registration or login.
+- Only the store owner or authorized administrators need to log in to manage the catalogue.
+
+The website should help customers discover products before visiting the physical store.
+
+## 3. Brand Identity and Design System
+
+Use the uploaded BAVIQUE logo as the primary branding asset. Preserve the original logo artwork without recreating, distorting, or replacing it.
+
+### Visual direction
+
+Create a premium, feminine, elegant, modern boutique aesthetic inspired by luxury jewellery packaging and beauty brands.
+
+**Color palette:**
+- Warm champagne cream: #F7E9DD
+- Soft blush pink: #E8A0A8
+- Rose gold: #B76E79
+- Rich metallic gold: #C49A52
+- Deep chocolate brown: #493126
+- Soft ivory: #FFF9F4
+
+Use these colors consistently across the website.
+
+### Glassmorphism
+
+Apply glassmorphism tastefully:
+- Semi-transparent cream and blush panels.
+- Background blur using backdrop filters.
+- Fine, translucent borders.
+- Soft, realistic shadows.
+- Rounded corners and generous spacing.
+- Elegant hover animations and subtle highlights.
+- Excellent text contrast despite transparent backgrounds.
+
+Use glass effects for navigation, category controls, floating panels, and selected UI elements. Do not put every component inside a glass box. Product photos and prices must remain clear and readable.
+
+### Typography
+
+Use an elegant serif font for prominent headings and a clean sans-serif font for descriptions, prices, and navigation. A refined script font can be used sparingly for the tagline.
+
+Use subtle animations, smooth transitions, and polished interactions. Avoid excessive neon colors, distracting animations, clutter, or a generic e-commerce template.
+
+## 4. Cinematic Intro Video
+
+Create a premium introductory experience using the brand introduction video that I will provide separately.
+
+### Intro sequence
+
+1. Display a warm champagne-colored background.
+2. Show a gentle fade-in of the BAVIQUE logo.
+3. Play the provided brand-introduction video in an elegant, cinematic layout.
+4. Transition smoothly into the main homepage.
+5. Reveal the hero section with a refined animation.
+
+### Video requirements
+
+- Use the supplied video as the source of truth. Do not substitute an unrelated video.
+- Until the video is provided, build a working video component with a placeholder and a clearly documented location for the actual video.
+- Use a muted video if autoplay is enabled, because browsers commonly restrict autoplay with sound.
+- Provide a visible Skip Intro button and replay option.
+- Display a poster image or branded fallback if the video fails to load.
+- Avoid forcing the intro to replay on every page navigation.
+- Respect reduced-motion accessibility preferences.
+- Optimize video loading so that the catalogue remains fast.
+- Do not prevent customers from accessing products if the video fails.
+
+The intro should feel like entering a premium boutique, not watching an advertisement that customers cannot skip.
+
+## 5. Homepage Design
+
+Build a complete, responsive homepage with the following sections.
+
+### A. Navigation bar
+
+Include:
+- BAVIQUE logo.
+- Home.
+- All Products.
+- Hair Accessories.
+- Makeup & Skincare.
+- Jewellery.
+- Bags & Fancy Items.
+- Dresses & Fashion.
+- Contact / Store Information.
+
+On mobile, use a clean hamburger menu.
+
+Make the navigation sticky when appropriate, with a subtle glassmorphism effect.
+
+Do not add customer Login, Sign Up, Cart, or Checkout buttons. The admin login should be accessed through a separate, unobtrusive Admin Login page.
+
+### B. Hero section
+
+Create an elegant, editorial-style hero section.
+
+Suggested heading:
+
+"Discover Your Everyday Sparkle"
+
+Supporting text:
+
+"From pretty little accessories to beauty essentials and fashion favourites, discover something that feels uniquely you."
+
+Buttons:
+- Explore Collection
+- Browse Categories
+
+The first button should scroll to or open the product catalogue. The second should navigate to the category section.
+
+Use high-quality product photography, soft gradients, and delicate decorative elements inspired by the supplied logo.
+
+### C. Product categories
+
+Create five visually attractive category cards:
+
+1. Hair Accessories
+2. Makeup & Skincare
+3. Jewellery
+4. Bags & Fancy Items
+5. Dresses & Fashion
+
+Each card should contain an appropriate image, category name, and a clear action to explore products in that category.
+
+Category selection must actually filter the catalogue. Do not make decorative buttons that do nothing.
+
+### D. Featured products
+
+Display a curated selection of products marked as Featured by the administrator.
+
+Each product card must include:
+- Product photograph.
+- Product name.
+- Price in Indian rupees (₹).
+- Category.
+- Availability badge.
+- View Details action.
+
+Do not show customer ratings, review counts, or fake popularity indicators. Only display information that the owner has actually entered.
+
+### E. Complete product catalogue
+
+Build a dedicated catalogue section with:
+- Search by product name.
+- Filter by category.
+- Filter by availability.
+- Optional price-range filtering.
+- Sorting by name and price.
+- Responsive product grid.
+- Pagination or Load More functionality.
+
+Product filters must work together correctly.
+
+If no products match the search, show a friendly empty state with a Clear Filters option.
+
+If the catalogue is empty, show a polished first-visit state rather than broken images or fake inventory.
+
+### F. Product details
+
+When a customer selects a product, open a detail page or accessible modal showing:
+- Large product image.
+- Additional images, if available.
+- Product name.
+- Description.
+- Price.
+- Category.
+- Availability.
+- Product code, if configured.
+
+For unavailable products, display "Currently Unavailable" clearly.
+
+Do not allow customers to add products to a cart or submit an online order.
+
+### G. Store information and footer
+
+Include configurable fields for:
+- Store address.
+- Opening hours.
+- Contact number.
+- Instagram profile.
+- Optional Google Maps location.
+
+Use the Instagram handle shown in the logo, `bavique_ff_`, as the initial profile reference only after confirming the correct profile URL.
+
+Provide buttons such as "View on Instagram" and "Get Directions" when valid destinations are configured.
+
+Do not invent contact information, addresses, opening hours, or social media links.
+
+## 6. Admin Dashboard — Simple for a Non-Technical Owner
+
+Create a separate, secure admin area designed for someone who may not be comfortable with technology.
+
+The main goal is that the owner can manage products using a few simple steps without editing code.
+
+### A. Admin login
+
+Provide:
+- Email and password login.
+- Clear validation messages.
+- Show/hide password control.
+- Forgot Password workflow, if a secure email service is configured.
+- Logout.
+- Session expiration.
+- Rate limiting against repeated login attempts.
+
+Do not create a public admin Sign Up page.
+
+Create the first administrator through a secure, documented setup process. Never expose a default admin password or secret in the frontend.
+
+### B. Admin dashboard overview
+
+Display simple summary cards:
+- Total Products.
+- Available Products.
+- Unavailable Products.
+- Total Categories.
+
+Include quick actions:
+- Add New Product.
+- Manage Products.
+- Manage Categories.
+- Store Settings.
+
+These figures must come from the real database.
+
+### C. Add Product — Main Feature
+
+Create a clear form titled "Add New Product".
+
+Required fields:
+- Product Name.
+- Category.
+- Price in ₹.
+- Short Description.
+- Availability Status.
+
+Optional fields:
+- Multiple Product Photos.
+- Longer Description.
+- Product Code.
+- Featured Product toggle.
+- Display Order.
+
+The image upload area should support:
+- Click to upload.
+- Drag and drop.
+- Image preview before saving.
+- Multiple images where appropriate.
+- Remove or replace image.
+- Upload progress.
+- Clear errors for unsupported files.
+
+After entering the details, the owner should click "Save Product".
+
+On success:
+1. Validate the product information.
+2. Upload images to the configured image-storage service.
+3. Save the product and image references in the database.
+4. Display a success message.
+5. Update the product list.
+6. Make the product visible on the public catalogue according to its visibility and availability settings.
+
+Prevent duplicate submissions while a save operation is in progress.
+
+If an upload or database save fails, show an understandable error and avoid creating broken product records.
+
+### D. Manage Products
+
+Provide a searchable admin table or card list containing:
+- Thumbnail.
+- Product Name.
+- Category.
+- Price.
+- Availability.
+- Last Updated.
+- Edit action.
+- Delete action.
+
+The owner must be able to:
+- Edit any product.
+- Change the price.
+- Replace photographs.
+- Update the description.
+- Change categories.
+- Mark products available or unavailable.
+- Feature or unfeature a product.
+- Delete a product after confirmation.
+
+Use clear confirmation dialogs for destructive actions.
+
+If a product is deleted, clean up its unused stored images safely. Do not delete an image that is still referenced by another product.
+
+### E. Manage Categories
+
+Allow administrators to:
+- Add a category.
+- Edit its name and description.
+- Upload or change a category image.
+- Change display order.
+- Hide or show a category.
+
+Prevent deletion of a category that still contains products unless those products are safely reassigned or the owner explicitly resolves the dependency.
+
+### F. Store Settings
+
+Provide a simple settings page for updating store contact details, social links, address, and opening hours.
+
+Do not require the owner to edit source code to change ordinary store information.
+
+### G. Usability requirements
+
+- Use simple labels and helpful examples.
+- Provide clear Save, Cancel, Edit, and Delete buttons.
+- Preserve entered values when validation fails.
+- Show loading states and success/error notifications.
+- Support mobile and desktop administration.
+- Keep the most common action, Add Product, easy to find.
+- Do not expose database details or technical errors to the owner.
+
+## 7. Product and Database Model
+
+Use a structured product schema with appropriate validation.
+
+Suggested Product fields:
+
+- `name`
+- `slug`
+- `description`
+- `shortDescription`
+- `price`
+- `categoryId`
+- `images`
+- `productCode`
+- `availability`
+- `featured`
+- `visibility`
+- `displayOrder`
+- `createdAt`
+- `updatedAt`
+
+Use a separate Category collection and Admin/User collection.
+
+Requirements:
+- Prices must be non-negative numbers stored consistently in the database.
+- Product names and required descriptions must be validated.
+- Categories must reference valid category records.
+- Slugs should be unique where required.
+- Timestamps should be generated by the backend.
+- Use database indexes for commonly searched or filtered fields when appropriate.
+- Use pagination and bounded queries to avoid returning the entire catalogue unnecessarily.
+- Add a configurable maximum number of images per product.
+- Store image URLs and metadata, not image binary data inside ordinary product documents.
+
+Treat availability and public visibility as separate fields. An unavailable product may remain visible with an unavailable badge, while a hidden product should not appear publicly.
+
+## 8. Recommended Technology Stack
+
+Build this as a full-stack application using:
+
+**Frontend**
+- React.
+- Vite.
+- Tailwind CSS.
+- React Router.
+- Lucide icons.
+- Accessible reusable components.
+
+**Backend**
+- Node.js.
+- Express.js.
+- REST API.
+- Server-side validation.
+
+**Database**
+- MongoDB with Mongoose schemas and validation.
+
+**Image storage**
+- Cloudinary or an equivalent managed image-storage service.
+
+**Deployment**
+- A suitable frontend host such as Vercel.
+- A suitable backend host that supports persistent server execution.
+- Managed MongoDB hosting.
+- HTTPS-enabled custom domain.
+
+Use compatible, stable package versions and document all environment variables.
+
+Keep the frontend, backend, database, and image storage properly separated. Do not store uploaded product images on an ephemeral server filesystem in production.
+
+## 9. REST API Requirements
+
+Implement authenticated, validated API endpoints for the following operations.
+
+**Public endpoints**
+- `GET /api/products`
+- `GET /api/products/:slug`
+- `GET /api/categories`
+- `GET /api/categories/:slug`
+- `GET /api/store-settings`
+
+**Protected admin endpoints**
+- `POST /api/admin/login`
+- `POST /api/admin/logout`
+- `GET /api/admin/me`
+- `GET /api/admin/products`
+- `POST /api/admin/products`
+- `PATCH /api/admin/products/:id`
+- `DELETE /api/admin/products/:id`
+- `POST /api/admin/categories`
+- `PATCH /api/admin/categories/:id`
+- `DELETE /api/admin/categories/:id`
+- Appropriate store-settings management endpoints.
+
+Use correct HTTP methods, status codes, pagination, validation, and consistent error responses.
+
+Public users must never gain administrative access by calling an API directly.
+
+## 10. Complete Security Checklist
+
+Treat security as a mandatory release requirement, not an optional improvement.
+
+### Authentication and authorization
+
+- Hash administrator passwords using Argon2id or an appropriately configured bcrypt implementation.
+- Never store or return plaintext passwords.
+- Do not hardcode credentials or expose secrets in frontend code.
+- Keep admin registration disabled publicly.
+- Protect every administrative API route with server-side authentication and authorization.
+- Verify ownership or permissions on every protected operation.
+- Use secure, HttpOnly, SameSite cookies for browser sessions where appropriate.
+- Use HTTPS and secure cookie settings in production.
+- Implement session expiration, logout invalidation, and safe password-reset tokens.
+- Add login rate limiting and reasonable lockout or throttling controls.
+- Protect cookie-authenticated state-changing requests against CSRF.
+- Never rely on hiding admin buttons as an authorization mechanism.
+
+### Input validation and common web vulnerabilities
+
+- Validate all inputs on both the frontend and backend.
+- Sanitize or safely render untrusted text to prevent stored and reflected XSS.
+- Use Mongoose safely and avoid unsafe query construction.
+- Prevent mass-assignment vulnerabilities by explicitly allowing editable fields.
+- Configure CORS with specific trusted origins.
+- Apply suitable security headers using Helmet.
+- Apply request-size limits and rate limiting.
+- Avoid leaking stack traces, credentials, database errors, or internal paths.
+- Keep dependencies updated and review known vulnerabilities.
+- Never expose database connection strings, API keys, or cloud credentials.
+
+### Secure image uploads
+
+- Accept only explicitly supported image formats.
+- Verify file signatures and actual image content rather than trusting file extensions or MIME headers alone.
+- Enforce file-size, image-dimension, and image-count limits.
+- Generate safe filenames and avoid executing uploaded content.
+- Reject SVG or other active content unless it is safely sanitized and explicitly supported.
+- Re-encode images where appropriate and generate optimized thumbnails.
+- Use a managed storage service with appropriate access controls.
+- Validate uploaded files on the server before publishing them.
+- Restrict image transformations and storage permissions.
+- Handle upload failures and abandoned files safely.
+
+### Data protection and operational security
+
+- Use environment variables or a managed secrets service.
+- Restrict database access to the application's required permissions.
+- Use database backups and document a recovery procedure.
+- Avoid collecting unnecessary customer personal information.
+- Do not add customer accounts, payment details, or order records because this website does not sell online.
+- Maintain appropriate administrator activity logs for logins, product changes, and deletions.
+- Do not log passwords, session tokens, or secret values.
+- Provide safe error handling and monitoring without exposing private information.
+- Use least-privilege permissions for hosting, database, and image storage.
+
+Before deployment, verify these protections against the actual implementation. Do not claim the site is completely secure simply because the checklist exists.
+
+## 11. Performance, SEO, Accessibility, and Responsive Design
+
+### Performance
+- Optimize images and serve responsive sizes.
+- Lazy-load below-the-fold product images.
+- Reserve image dimensions to prevent layout shifts.
+- Load the intro video efficiently and avoid delaying the catalogue.
+- Use pagination and server-side filtering.
+- Add appropriate caching for public catalogue responses.
+- Avoid unnecessary frontend dependencies.
+
+### SEO
+- Give pages meaningful titles and descriptions.
+- Use clean, readable product URLs.
+- Add Open Graph metadata.
+- Include a suitable sitemap and robots.txt.
+- Use descriptive image alt text.
+- Avoid indexing private admin pages.
+- Do not include hidden or unavailable products in public structured data where inappropriate.
+
+### Accessibility
+- Use semantic HTML.
+- Ensure keyboard navigation and visible focus states.
+- Label every input correctly.
+- Provide accessible form errors and status messages.
+- Use sufficient color contrast.
+- Support screen readers and reduced-motion preferences.
+- Ensure dialogs can be operated and dismissed accessibly.
+
+### Responsive design
+Test layouts at approximately:
+- 320–375 px mobile width.
+- 390–430 px mobile width.
+- 768 px tablet width.
+- 1024 px laptop width.
+- 1440 px desktop width.
+
+Ensure that navigation, product cards, upload forms, tables, dialogs, and the admin dashboard work without horizontal overflow.
+
+## 12. Testing and Final Quality Assurance
+
+Before calling the website finished, run a complete test pass.
+
+### Functional tests
+- Homepage and video intro load correctly.
+- Skip Intro works.
+- All navigation links work.
+- Category filtering and search return correct results.
+- Product details show correct data.
+- Prices display in ₹ with sensible formatting.
+- Unavailable and hidden products behave correctly.
+- Admin login, logout, and session expiration work.
+- Invalid login attempts are handled safely.
+- Unauthorized API requests are rejected.
+- Product creation, editing, and deletion work.
+- Image uploads, replacement, and failure handling work.
+- Category creation and editing work.
+- Empty states, loading states, and validation errors work.
+- Store settings update correctly.
+- No shopping cart, checkout, payment, or order functionality is present.
+
+### Security tests
+- Try accessing admin routes without logging in.
+- Try sending unauthorized requests directly to admin APIs.
+- Verify that an ordinary public visitor cannot create or modify products.
+- Test invalid IDs, malformed input, oversized requests, and unsupported uploads.
+- Test HTML/script payloads in text fields.
+- Test login throttling and session handling.
+- Verify that environment secrets are absent from public frontend bundles and repository files.
+- Check CORS, HTTPS, security headers, and cookie settings.
+- Run dependency vulnerability checks and fix critical or high-risk findings.
+- Verify that production error messages do not expose internal details.
+
+### Visual and usability tests
+- Compare the implementation against the supplied logo.
+- Verify the cream, blush, gold, and brown palette.
+- Check that glass effects do not reduce readability.
+- Verify product-image cropping and quality.
+- Test mobile layouts and keyboard navigation.
+- Confirm that the owner can add a product without technical assistance.
+- Check browser console errors, failed network requests, and missing assets.
+
+### Release gate
+
+Do not mark the website production-ready until:
+1. The build succeeds.
+2. Tests pass, or remaining failures are clearly documented.
+3. Security-critical issues are fixed.
+4. All essential features work against the real backend and database.
+5. Production configuration is documented.
+6. The owner has a secure way to access the admin dashboard.
+7. The intro video can be added without rebuilding the entire website.
+8. No placeholder credentials, fake products, broken links, or nonfunctional controls remain in the final production experience.
+
+Provide a final QA report that separates **Passed**, **Failed**, **Not Tested**, and **Requires Deployment Configuration** items. Never claim a test was performed unless it was actually run.
+
+## 13. Final Deliverables
+
+Deliver:
+- Complete responsive frontend.
+- Complete backend and REST APIs.
+- Database schemas and indexes.
+- Secure administrator authentication.
+- Working admin dashboard.
+- Product and category management.
+- Image upload and storage integration.
+- Intro-video integration point.
+- Environment variable example file without real secrets.
+- Database initialization and first-admin setup instructions.
+- README with local setup, deployment, and troubleshooting.
+- Automated tests for essential functionality.
+- Security and QA reports.
+
+Start by planning the architecture and component structure, then implement the complete system. Use reusable components and clean code. Test each feature as it is implemented.
+
+**Final instruction:** Prioritize a beautiful, trustworthy brand experience for customers and a genuinely simple product-management experience for the store owner. The result must be a functional store catalogue, not merely a visual mockup or an online shopping platform.
+</USER_REQUEST>
+<ADDITIONAL_METADATA>
+The current local time is: 2026-10-09T18:52:51+05:30.
+</ADDITIONAL_METADATA>
+<USER_SETTINGS_CHANGE>
+The user changed setting `Model Selection` from None to Gemini 3.8 Flash (High). No need to comment on this change if the user doesn't ask about it. If reporting what model you are, please use a human readable name instead of the exact string.
+</USER_SETTINGS_CHANGE>

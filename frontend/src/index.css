@@ -1,0 +1,246 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: #FFFDF9;
+    color: #261811;
+    overflow-x: hidden;
+    position: relative;
+    background-image: 
+      radial-gradient(at 15% 15%, rgba(247, 233, 221, 0.6) 0px, transparent 50%),
+      radial-gradient(at 85% 20%, rgba(245, 198, 205, 0.45) 0px, transparent 50%),
+      radial-gradient(at 50% 50%, rgba(253, 252, 249, 0.5) 0px, transparent 60%),
+      radial-gradient(at 20% 80%, rgba(223, 194, 134, 0.35) 0px, transparent 50%),
+      radial-gradient(at 80% 85%, rgba(245, 198, 205, 0.4) 0px, transparent 50%);
+    background-attachment: fixed;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #FAF4ED;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #E4BDA0;
+  border-radius: 9999px;
+  border: 2px solid #FAF4ED;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #C49A52;
+}
+
+/* ========================================================
+   PREMIUM LUXURY GLASSMORPHISM SYSTEM
+   ======================================================== */
+
+/* Standard Frosted Glass Panel */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 36px 0 rgba(73, 49, 38, 0.06), inset 0 1px 1px 0 rgba(255, 255, 255, 0.95);
+}
+
+/* Navigation Frosted Header */
+.glass-nav {
+  background: rgba(255, 253, 249, 0.82);
+  backdrop-filter: blur(24px) saturate(190%);
+  -webkit-backdrop-filter: blur(24px) saturate(190%);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: 0 4px 30px rgba(73, 49, 38, 0.04), inset 0 -1px 0 0 rgba(238, 211, 190, 0.3);
+}
+
+/* Product & Category Glass Cards with Elevation */
+.glass-card {
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(18px) saturate(175%);
+  -webkit-backdrop-filter: blur(18px) saturate(175%);
+  border: 1px solid rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 32px 0 rgba(73, 49, 38, 0.05), inset 0 1px 0 0 rgba(255, 255, 255, 0.95);
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.88);
+  border-color: rgba(196, 154, 82, 0.5);
+  box-shadow: 0 20px 48px -10px rgba(73, 49, 38, 0.12), 0 0 28px rgba(196, 154, 82, 0.18), inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+/* Glass Modals and Popups */
+.glass-modal {
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(28px) saturate(200%);
+  -webkit-backdrop-filter: blur(28px) saturate(200%);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 30px 70px -15px rgba(73, 49, 38, 0.25), inset 0 1px 2px 0 rgba(255, 255, 255, 1);
+}
+
+/* Glass Inputs & Form Controls */
+.glass-input {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  box-shadow: inset 0 1px 2px rgba(73, 49, 38, 0.03), 0 2px 8px rgba(73, 49, 38, 0.02);
+  transition: all 0.2s ease;
+}
+
+.glass-input:focus {
+  background: rgba(255, 255, 255, 0.92);
+  border-color: rgba(196, 154, 82, 0.7);
+  box-shadow: 0 0 0 3px rgba(196, 154, 82, 0.18), inset 0 1px 1px rgba(73, 49, 38, 0.03);
+}
+
+/* Glass Pills and Badges */
+.glass-pill {
+  background: rgba(255, 255, 255, 0.68);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 12px rgba(73, 49, 38, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Glass Buttons */
+.glass-btn-light {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.85) 0%, rgba(255, 245, 240, 0.65) 100%);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.95);
+  box-shadow: 0 4px 16px rgba(73, 49, 38, 0.06), inset 0 1px 1px rgba(255, 255, 255, 1);
+  transition: all 0.25s ease;
+}
+
+.glass-btn-light:hover {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 6px 20px rgba(73, 49, 38, 0.1), inset 0 1px 1px rgba(255, 255, 255, 1);
+  transform: translateY(-1px);
+}
+
+.glass-btn-dark {
+  background: linear-gradient(135deg, rgba(38, 24, 17, 0.92) 0%, rgba(73, 49, 38, 0.88) 100%);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(196, 154, 82, 0.45);
+  box-shadow: 0 8px 24px rgba(38, 24, 17, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.2);
+  transition: all 0.25s ease;
+}
+
+.glass-btn-dark:hover {
+  background: linear-gradient(135deg, rgba(48, 30, 22, 0.96) 0%, rgba(85, 57, 44, 0.92) 100%);
+  box-shadow: 0 12px 30px rgba(38, 24, 17, 0.3), 0 0 16px rgba(196, 154, 82, 0.25);
+  transform: translateY(-1px);
+}
+
+/* Glass Admin Sidebar */
+.glass-sidebar {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(26px) saturate(185%);
+  -webkit-backdrop-filter: blur(26px) saturate(185%);
+  border-right: 1px solid rgba(255, 255, 255, 0.9);
+  box-shadow: 4px 0 32px rgba(73, 49, 38, 0.04);
+}
+
+/* Blush Tinted Glass */
+.glass-blush {
+  background: linear-gradient(135deg, rgba(253, 245, 246, 0.78) 0%, rgba(247, 233, 221, 0.68) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(245, 198, 205, 0.6);
+  box-shadow: 0 8px 30px rgba(183, 110, 121, 0.08), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+/* Gold Tinted Glass */
+.glass-gold {
+  background: linear-gradient(135deg, rgba(255, 252, 242, 0.8) 0%, rgba(247, 233, 221, 0.65) 100%);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(223, 194, 134, 0.55);
+  box-shadow: 0 8px 30px rgba(196, 154, 82, 0.09), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+}
+
+.gold-border {
+  border: 1px solid rgba(196, 154, 82, 0.35);
+}
+
+.gold-gradient-text {
+  background: linear-gradient(135deg, #8E692D 0%, #C49A52 50%, #E8A0A8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.rose-gradient-text {
+  background: linear-gradient(135deg, #B76E79 0%, #E8A0A8 60%, #C49A52 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Shimmer Highlight */
+@keyframes shimmerWave {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.shimmer-bg {
+  background: linear-gradient(90deg, rgba(250, 244, 237, 0.5) 25%, rgba(255, 253, 249, 0.8) 50%, rgba(250, 244, 237, 0.5) 75%);
+  background-size: 200% 100%;
+  animation: shimmerWave 2s infinite ease-in-out;
+}
+
+/* Ambient Floating Keyframes */
+@keyframes floatOrb1 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(40px, -30px) scale(1.08);
+  }
+}
+
+@keyframes floatOrb2 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(-35px, 35px) scale(1.06);
+  }
+}
+
+@keyframes floatOrb3 {
+  0%, 100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  50% {
+    transform: translate(25px, 25px) scale(1.1);
+  }
+}
+
+.animate-orb-1 {
+  animation: floatOrb1 14s ease-in-out infinite;
+}
+
+.animate-orb-2 {
+  animation: floatOrb2 18s ease-in-out infinite;
+}
+
+.animate-orb-3 {
+  animation: floatOrb3 16s ease-in-out infinite;
+}
